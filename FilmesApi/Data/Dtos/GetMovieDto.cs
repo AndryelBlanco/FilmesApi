@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FilmesApi.Models
+namespace FilmesApi.Data.Dtos
 {
-    public class MovieData
-    {   
+    public class GetMovieDto
+    {
         [Key]
         [Required]
         public int Id { get; set; }
@@ -18,5 +18,7 @@ namespace FilmesApi.Models
 
         [Range(1, 600)]
         public int Duration { get; set; }
+
+        public DateTime ConsultedAt { get; set; }
     }
 }

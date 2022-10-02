@@ -1,13 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FilmesApi.Models
+namespace FilmesApi.Data.Dtos
 {
-    public class MovieData
-    {   
-        [Key]
-        [Required]
-        public int Id { get; set; }
-
+    public class CreateMovieDto
+    {
         [Required(ErrorMessage = "Movie Title cannot be null")]
         public string Title { get; set; }
 
